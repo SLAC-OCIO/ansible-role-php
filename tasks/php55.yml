@@ -67,11 +67,11 @@
     - { regexp: 'max_execution_time', line: 'max_execution_time = 7200' }
     - { regexp: 'max_input_time', line: 'max_input_time = 7200' }
     - { regexp: 'memory_limit', line: 'memory_limit = -1' }
-    - { regexp: 'post_max_size', line: 'post_max_size = 200M' }
-    - { regexp: 'upload_max_filesize', line: 'upload_max_filesize = 200M' }
+    - { regexp: 'post_max_size', line: 'post_max_size = 512M' }
+    - { regexp: 'upload_max_filesize', line: 'upload_max_filesize = 512M' }
     - { regexp: 'max_file_uploads', line: 'max_file_uploads = 100' }
-    - { regexp: 'date.timezone', line: 'date.timezone = Europe/Brussels' }
-    - { regexp: 'date.default_latitude', line: 'date.default_latitude = 50.877369' }
-    - { regexp: 'date.default_longitude', line: 'date.default_longitude = 4.684167' }
+    - { regexp: 'date.timezone', line: 'date.timezone = America/Los_Angeles' }
+    - { regexp: 'date.default_latitude', line: 'date.default_latitude = 37.418276,' }
+    - { regexp: 'date.default_longitude', line: 'date.default_longitude = -122.203396' }
     - { regexp: 'session.cookie_httponly', line: 'session.cookie_httponly = 1' }
     - { regexp: ';?phar.readonly', line: 'phar.readonly = Off' }
