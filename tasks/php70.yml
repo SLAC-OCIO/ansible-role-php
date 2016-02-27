@@ -42,6 +42,12 @@
     - { regexp: 'opcache.fast_shutdown', line: 'opcache.fast_shutdown=1' }
     - { regexp: 'opcache.use_cwd', line: 'opcache.use_cwd=1' }
 
+  #Added - Brew doesn't add this dir 
+- name: Add the php7 conf.d folder
+  file: 
+    path: /usr/local/etc/php/7.0/conf.d
+    state: directory
+
 - name: configure the apcu settings
   lineinfile: >
     dest=/usr/local/etc/php/7.0/conf.d/ext-apcu.ini
@@ -65,8 +71,8 @@
     - { regexp: 'post_max_size', line: 'post_max_size = 200M' }
     - { regexp: 'upload_max_filesize', line: 'upload_max_filesize = 200M' }
     - { regexp: 'max_file_uploads', line: 'max_file_uploads = 100' }
-    - { regexp: 'date.timezone', line: 'date.timezone = Europe/Brussels' }
-    - { regexp: 'date.default_latitude', line: 'date.default_latitude = 50.877369' }
-    - { regexp: 'date.default_longitude', line: 'date.default_longitude = 4.684167' }
+    - { regexp: 'date.timezone', line: 'date.timezone = America/Los_Angeles' 
+    - { regexp: 'date.default_latitude', line: 'date.default_latitude = 37.418276,' }
+    - { regexp: 'date.default_longitude', line: 'date.default_longitude = -122.203396' }
     - { regexp: 'session.cookie_httponly', line: 'session.cookie_httponly = 1' }
     - { regexp: ';?phar.readonly', line: 'phar.readonly = Off' }
