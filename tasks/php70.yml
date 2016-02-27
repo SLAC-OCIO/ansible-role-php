@@ -71,7 +71,7 @@
     - { regexp: 'post_max_size', line: 'post_max_size = 200M' }
     - { regexp: 'upload_max_filesize', line: 'upload_max_filesize = 200M' }
     - { regexp: 'max_file_uploads', line: 'max_file_uploads = 100' }
-    - { regexp: 'date.timezone', line: 'date.timezone = America/Los_Angeles' 
+    - { regexp: 'date.timezone', line: 'date.timezone = America/Los_Angeles' }
     - { regexp: 'date.default_latitude', line: 'date.default_latitude = 37.418276,' }
     - { regexp: 'date.default_longitude', line: 'date.default_longitude = -122.203396' }
     - { regexp: 'session.cookie_httponly', line: 'session.cookie_httponly = 1' }
