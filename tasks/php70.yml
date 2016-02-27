@@ -42,20 +42,6 @@
     - { regexp: 'opcache.fast_shutdown', line: 'opcache.fast_shutdown=1' }
     - { regexp: 'opcache.use_cwd', line: 'opcache.use_cwd=1' }
 
-  #Added - Brew doesn't add this dir 
-- name: Add the php7 conf.d folder
-  file: 
-    path: /usr/local/etc/php/7.0/conf.d
-    state: directory
-
-- name: configure the apcu settings
-  lineinfile: >
-    dest=/usr/local/etc/php/7.0/conf.d/ext-apcu.ini
-    regexp="{{ item.regexp }}"
-    line="{{ item.line }}"
-    state=present
-  with_items:
-    - { regexp: 'apc.shm_size', line: 'apc.shm_size=256M' }
 
 - name: configure the php.ini settings
   lineinfile: >
